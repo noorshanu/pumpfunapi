@@ -642,8 +642,8 @@ const buyTokensMultiple = (wallets, tokenAddress) => __awaiter(void 0, void 0, v
                 // Add buy instruction
                 const bufferData = Buffer.alloc(24);
                 bufferData.write("66063d1201daebea", "hex");
-                // bufferData.writeBigUInt64LE(tokenAmount, 8);
-                bufferData.writeBigUInt64LE(BigInt(357), 8);
+                bufferData.writeBigUInt64LE(tokenAmount, 8);
+                // bufferData.writeBigUInt64LE(BigInt(357), 8);
                 bufferData.writeBigInt64LE(BigInt(balance), 16);
                 console.log("mint", mint);
                 const buyIx = new web3_js_1.TransactionInstruction({
@@ -783,8 +783,8 @@ const buyTokensMultipleForCreate = (wallets, tokenAddress) => __awaiter(void 0, 
             // Add buy instruction
             const bufferData = Buffer.alloc(24);
             bufferData.write("66063d1201daebea", "hex");
-            bufferData.writeBigUInt64LE(BigInt(357), 8);
-            // bufferData.writeBigUInt64LE(tokenAmount, 8);
+            // bufferData.writeBigUInt64LE(BigInt(357), 8);
+            bufferData.writeBigUInt64LE(tokenAmount, 8);
             bufferData.writeBigInt64LE(BigInt(balance), 16);
             // console.log("mint", mint)
             const buyIx = new web3_js_1.TransactionInstruction({
