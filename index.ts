@@ -13,7 +13,7 @@ const app = express();
 
 const corsOptions = {
     credentials: true,
-    origin: ['http://localhost:3000/', "https://pfun.blocktools.ai/, * "] // Whitelist the domains you want to allow
+    origin: ['http://localhost:3000', 'https://pfun.blocktools.ai'], // Whitelisted domains
 };
 // Connect to MongoDB
 connectDB();
