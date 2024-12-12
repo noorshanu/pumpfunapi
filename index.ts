@@ -13,13 +13,13 @@ const app = express();
 
 const corsOptions = {
     credentials: true,
-    origin: ['http://localhost:3000/'] // Whitelist the domains you want to allow
+    origin: ['http://localhost:3000/', "https://pfun.blocktools.ai/"] // Whitelist the domains you want to allow
 };
 // Connect to MongoDB
 connectDB();
 
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Routes
